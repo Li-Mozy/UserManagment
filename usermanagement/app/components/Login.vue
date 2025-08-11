@@ -107,7 +107,10 @@
         loading.value = false
         if (logUser.success === true){
             successMessage.value = logUser.message
-            // await navigateTo('/users')
+            setTimeout(async() => {
+                
+                await navigateTo('/users')
+            }, 2000);
         } else {
             successMessage.value = logUser.message
         }
